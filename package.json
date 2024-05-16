@@ -1,0 +1,38 @@
+{
+  "name": "zap-gpt",
+  "version": "3.0.0",
+  "description": "",
+  "main": "dist/index.cjs",
+  "scripts": {
+    "config": "node ./setup.js",
+    "dev": "node dist/index.cjs",
+    "start": "pm2 start dist/index.cjs --name zap-gpt --no-daemon",
+    "stop": "npx pm2 delete zap-gpt"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Marcus Gonçalves",
+    "email": "marcusgoncalves067@gmail.com"
+  },
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@google-cloud/logging-winston": "6.0.0",
+    "@google/generative-ai": "0.3.1",
+    "@hapi/boom": "10.0.1",
+    "@whiskeysockets/baileys": "6.7.1",
+    "axios": "1.6.8",
+    "dotenv": "16.4.5",
+    "fluent-ffmpeg": "^2.1.2",
+    "inquirer": "9.2.16",
+    "node-cache": "5.1.2",
+    "openai": "^4.46.1",
+    "pino": "7.11.0",
+    "qrcode-terminal": "0.12.0",
+    "winston": "3.13.0"
+  }
+}
